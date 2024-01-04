@@ -1,0 +1,15 @@
+/* homepage.scss */
+
+#homepage-links > a:first-child {
+    padding-left: 0px;
+}
+
+#homepage-links > a {
+    border-right: 0.1rem solid black;
+    padding-left: 0.3rem;
+    padding-right: 0.55rem;
+}
+
+#homepage-links > a:last-child {
+    border-right: none;
+}
