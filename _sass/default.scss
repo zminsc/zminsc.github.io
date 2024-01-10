@@ -75,11 +75,28 @@ ul {
 
 a {
     color: blue;    
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 p {
-    margin: 1.5rem 0;
-    line-height: 1.35rem;
-    font-size: 1.2rem;
+    margin: 1rem 0;
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+
+p code {
+    font-size: 0.9rem;
+    padding: 0.1rem 0.25rem;
+    background-color: rgb(230, 230, 230);
+    border-radius: 0.3rem;
+}
+
+code {
+    font-family: monospace;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+strong {
+    font-weight: bold;
 }

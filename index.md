@@ -9,4 +9,25 @@ title: Steven Chang's Website
     {% endfor %}
 </nav>
 
-This website is currently a work in progress.
+<div id="homepage-sections">
+    <div id="homepage-sections-left">
+        <section>
+            <h2>projects</h2>
+            <ul>
+                <li>
+            This section is currently a work in progress.</li>
+            </ul>
+        </section>
+    </div>
+    <div id="homepage-sections-right">
+        <section>
+            <h2>posts</h2>
+            <ul>
+                {% for post in site.posts %}
+                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</div>
+

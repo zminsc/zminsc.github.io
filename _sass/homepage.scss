@@ -13,3 +13,19 @@
 #homepage-links > a:last-child {
     border-right: none;
 }
+
+#homepage-sections {
+    display: flex;
+}
+
+#homepage-sections-left, #homepage-sections-right {
+    width: 50%;
+}
+
+#homepage-sections ul {
+    list-style: disc;
+}
+
+#homepage-sections li {
+    margin: 0 0 0 2rem;
+}
