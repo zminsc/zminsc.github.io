@@ -1,6 +1,8 @@
 ---
 title: code highlighting in jekyll
+layout: article
 ---
+
 **TL;DR**: Surround your code snippet in highlight tags ({% raw %}`{% highlight %}` and `{% endhighlight %}`{% endraw %}). Install a stylesheet from [this repository](https://github.com/jwarby/jekyll-pygments-themes) and link it. Voilà, you've got code highlighting. And always remember to read the documentation.
 
 Wanting to include code snippets in my posts, I took to Google and searched "code highlighting jekyll". The first result, a StackOverflow post, proposed I use `highlight` tags like so:
@@ -8,7 +10,9 @@ Wanting to include code snippets in my posts, I took to Google and searched "cod
 {% highlight markdown %}
 {% raw %}
 {% highlight python %}
+
 # put my code snippet here
+
 {% endhighlight %}
 {% endraw %}
 {% endhighlight %}

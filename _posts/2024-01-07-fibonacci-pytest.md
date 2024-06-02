@@ -1,5 +1,6 @@
 ---
 title: fibonacci pytest
+layout: article
 ---
 
 I was first introduced to the concept of test-driven-development (TDD) in CIS 1200, the introductory programming course at Penn. The course was taught in OCaml and Java; unit tests were written with an OCaml Assert module and the JUnit library respectively. Bored over winter break, I decided I would figure out how to write unit tests in Python. My main concern: how difficult would the whole thing be to set up and use?
