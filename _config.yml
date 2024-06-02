@@ -1,5 +1,7 @@
 # _config.yml
 
+theme: jekyll-text-theme
+
 defaults:
   - scope:
       path: ""
