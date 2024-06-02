@@ -1,6 +1,9 @@
 # _config.yml
 
+title: Steven Chang's Website
+
 theme: jekyll-text-theme
+text_skin: dark
 
 defaults:
   - scope:
