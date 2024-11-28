@@ -1,33 +1,14 @@
 ---
-title: Steven Chang's Website
+title: Steven Chang
 ---
-<h1 id="homepage-heading">Steven Chang's Website</h1>
+I’m an incoming software engineering intern at [Ramp](https://ramp.com/), where I’ll be building the next generation of financial software. Previously, I’ve worked on a regression testing framework at [Meta](https://about.meta.com/) and researched graph neural networks with the [Penn ATLAS Group](https://web.sas.upenn.edu/pennatlas/).
 
-<nav id="homepage-links">
-    {% for link in site.data.homepage_links %}
-        <a href="{{ link.url | relative_url }}">{{ link.name }}</a>
-    {% endfor %}
-</nav>
+I’m also a junior at the [University of Pennsylvania](https://www.upenn.edu/), where I served for two semesters as a teaching assistant for the introductory programming languages course, [CIS 1200](https://www.seas.upenn.edu/~cis120/current/).
 
-<div id="homepage-sections">
-    <div id="homepage-sections-left">
-        <section>
-            <h2>projects</h2>
-            <ul>
-                <li>
-            This section is currently a work in progress.</li>
-            </ul>
-        </section>
-    </div>
-    <div id="homepage-sections-right">
-        <section>
-            <h2>posts</h2>
-            <ul>
-                {% for post in site.posts %}
-                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </section>
-    </div>
-</div>
+A little more about me...
 
+- I’m a dancer and choreographer for [Pan Asian Dance Troupe](https://www.panasiandance.com/), Penn’s premier Asian fusion dance troupe.
+
+- I used to do competitive mathematics. I’ve represented Myanmar at several international competitions, and I’m proud to have helped my country [win its first gold medal](https://www.facebook.com/share/p/1G7vXeXbhB/) at a major event.
+
+Outside of academics and work, I enjoy running, chess, speedcubing, writing, and badminton.
