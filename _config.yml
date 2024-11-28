@@ -2,12 +2,7 @@
 
 defaults:
   - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
-  - scope:
-      path: ""
+      path: "" # empty string means all files in project
     values:
       layout: default
 

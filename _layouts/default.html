@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ page.title }}</title>
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
         {% feed_meta %}
         {% seo %}
     </head>
     <body>
-        {{ content }}
+        <h1>Steven Chang</h1>
+        <nav>
+            <a href="https://www.linkedin.com/in/zminsc/">linkedin</a>
+            <a href="https://github.com/zminsc">github</a>
+            <a href="mailto:zawmin.stevenchang@gmail.com">email</a>
+        </nav>
+        <section>
+            {{ content }}
+        </section>
     </body>
 </html>
