@@ -1,4 +1,5 @@
 ---
+layout: home
 title: Steven Chang
 ---
 # Hi, I'm Steven.
