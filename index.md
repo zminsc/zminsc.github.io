@@ -16,4 +16,4 @@ A little more about me...
 
 - I used to do competitive mathematics. I’ve represented Myanmar at several international competitions, and I’m proud to have helped my country [win its first gold medal](https://www.facebook.com/share/p/1G7vXeXbhB/) at a major event.
 
-Outside of academics and work, I enjoy running, chess, speedcubing, writing, and badminton. Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/zminsc/), check out my code on [GitHub](https://github.com/zminsc), or email me at [zawmin.stevenchang@gmail.com](mailto:zawmin.stevenchang@gmail.com).
+Outside of academics and work, I enjoy running, chess, speedcubing, writing, and badminton. Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/zminsc/), check out my code on [GitHub](https://github.com/zminsc), or email me at [me@zminsc.dev](mailto:me@zminsc.dev).
