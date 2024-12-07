@@ -31,6 +31,10 @@ nav div {
     align-items: center;
 }
 
+nav a {
+    text-decoration: none;
+}
+
 .separator {
     margin: 0 10px;
     color: #000;
@@ -43,8 +47,10 @@ nav div {
 }
 
 a {
-    text-decoration: none;
-    color: maroon;    
+    text-decoration: underline;
+    text-underline-offset: 2.5px;
+    text-decoration-thickness: 1px;
+    color: #B51D09;    
     font-size: 1rem;
 }
 
