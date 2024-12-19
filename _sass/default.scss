@@ -58,3 +58,36 @@ p {
     line-height: 1.75rem;
     font-size: 1rem;
 }
+
+.posts-container {
+    margin-top: 40px;
+}
+
+.posts-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.post * {
+    margin: 0px;
+}
+
+.post h2 {
+    font-weight: normal;
+}
+
+.post-date {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.post-description {
+    color: #555;
+    font-size: 1.0rem;
+}
