@@ -16,4 +16,4 @@ A little more about me...
 
 - I used to do competitive mathematics. I’ve represented Myanmar at several international competitions, and I’m proud to have helped my country [win its first gold medal](https://www.facebook.com/share/p/1G7vXeXbhB/) at a major event.
 
-Outside of academics and work, I enjoy running, chess, speedcubing, writing, and badminton. Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/zminsc/), check out my code on [GitHub](https://github.com/zminsc), or email me at [me@zminsc.dev](mailto:me@zminsc.dev).
+Outside of academics and work, I enjoy [running](https://www.strava.com/athletes/147406763), [chess](https://www.chess.com/member/steven_knight), speedcubing, [reading](https://www.goodreads.com/zminsc), and [writing](https://zminsc.dev/blog). Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/zminsc/), check out my code on [GitHub](https://github.com/zminsc), or email me at [me@zminsc.dev](mailto:me@zminsc.dev).
