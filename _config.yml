@@ -5,8 +5,12 @@ defaults:
       path: "" # empty string means all files in project
     values:
       layout: default
+      title: Steven Chang
+      url: "https://zminsc.github.io"
+      baseurl: ""
 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
