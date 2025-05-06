@@ -54,7 +54,7 @@ a {
   font-size: 1rem;
 }
 
-p {
+p, li {
   line-height: 1.75rem;
   font-size: 1rem;
 }
@@ -72,6 +72,16 @@ blockquote {
   margin: 0;
   padding: 0rem 0.5rem;
   border-left: 2px solid #b51d09;
+}
+
+/* inline code */
+code:not(pre code) {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  font-size: 1.00em;
+  color: #b51d09;
+  text-underline-offset: 1.5px;
+  text-decoration-thickness: 2px;
 }
 
 .posts-container a {
