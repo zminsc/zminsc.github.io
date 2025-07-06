@@ -3,7 +3,7 @@
 body {
   font-family: "Helvetica Neue", "Helvetica", "Arial";
   padding: 5% 15%;
-  background-color: #f5f5e0;
+  background-color: #F9F7F1;
 
   @media (max-width: 600px) {
     padding: 2% 5%;
@@ -44,13 +44,15 @@ nav a {
 
 .name-link {
   color: #000;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 a {
   text-decoration: underline;
   text-underline-offset: 2.5px;
   text-decoration-thickness: 1px;
-  color: #b51d09;
+  color: #1D2F6F;
   font-size: 1rem;
 }
 
@@ -79,7 +81,7 @@ code:not(pre code) {
   font-family: "Courier New", Courier, monospace;
   font-weight: 600;
   font-size: 1.00em;
-  color: #b51d09;
+  color: #1D2F6F;
   text-underline-offset: 1.5px;
   text-decoration-thickness: 2px;
 }
@@ -111,4 +113,75 @@ code:not(pre code) {
 .post-description {
   color: #555;
   font-size: 1rem;
+}
+
+/* Hero Banner */
+.hero-banner {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin: 0 -15% 0 -15%;
+  padding: 3rem 15%;
+  
+  @media (max-width: 600px) {
+    margin: 0 -5% 0 -5%;
+    padding: 2rem 5%;
+  }
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    margin: 0 -10% 1.5rem -10%;
+    padding: 2.5rem 10%;
+  }
+}
+
+.hero-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.hero-subtitle {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-links a {
+  text-decoration: underline;
+  text-underline-offset: 2.5px;
+  text-decoration-thickness: 1px;
+  color: #1D2F6F;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-links {
+    justify-content: center;
+  }
 }
