@@ -4,6 +4,28 @@ const description = "I'm a software engineering intern at Ramp, where I'm buildi
 
 const { compiledContent } = await import('../content/home.md');
 const html = compiledContent();
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "Person",
+			"name": "Steven Chang",
+			"jobTitle": "Software Engineering Intern",
+			"worksFor": {
+				"@type": "Organization",
+				"name": "Ramp"
+			},
+			"url": "https://zminsc.github.io"
+		},
+		{
+			"@type": "WebSite",
+			"name": "Steven Chang",
+			"url": "https://zminsc.github.io",
+			"description": description
+		}
+	]
+};
 ---
 
 <html lang="en">
@@ -17,6 +39,7 @@ const html = compiledContent();
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;600&display=swap" rel="stylesheet" />
 		<title>{title}</title>
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 		<style is:global>
 			* {
 				margin: 0;
