@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Posts";
+const description = "All posts by Steven Chang";
+
+// get all markdown files in the posts directory
+const posts = await Astro.glob('./*.md');
+---
+
+<BaseLayout title={title} description={description}>
+	<h1>Posts</h1>
+	<ul style="list-style: none; padding: 0;">
+		{posts.map((post) => (
+			<li style="margin-bottom: 1.5rem;">
+				<div style="display: flex; gap: 1rem;">
+					<span style="color: #9ca3af; font-size: 1.25rem; white-space: nowrap;">
+						{new Date(post.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
+					</span>
+					<div>
+						<a href={post.url} style="font-size: 1.25rem; font-weight: 600;">
+							{post.frontmatter.title}
+						</a>
+						<p style="margin-top: 0.5rem; color: #c7d2fe;">
+							{post.frontmatter.description}
+						</p>
+					</div>
+				</div>
+			</li>
+		))}
+	</ul>
+</BaseLayout>
