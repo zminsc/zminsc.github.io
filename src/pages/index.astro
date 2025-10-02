@@ -1,0 +1,93 @@
+---
+const title = "Steven Chang";
+const description = "I'm a software engineering intern at Ramp, where I'm building the next generation of financial software.";
+
+const { compiledContent } = await import('../content/home.md');
+const html = compiledContent();
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;600&display=swap" rel="stylesheet" />
+		<title>{title}</title>
+		<style is:global>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			html {
+				font-family: 'Roboto Serif', serif;
+				background-color: #1a2332;
+				color: #ffffff;
+				line-height: 1.75;
+			}
+
+			body {
+				min-height: 100vh;
+				padding: 1rem;
+			}
+
+			main {
+				max-width: 42rem;
+				margin: 0 auto;
+				padding: 3rem 1.5rem;
+			}
+
+			@media (min-width: 640px) {
+				main {
+					padding: 3rem 1.25rem;
+				}
+			}
+
+			@media (min-width: 1024px) {
+				main {
+					padding: 3rem 1rem;
+				}
+			}
+
+			h1 {
+				font-size: 1.875rem;
+				font-weight: 600;
+				margin-bottom: 1.5rem;
+			}
+
+			@media (min-width: 640px) {
+				h1 {
+					font-size: 2.25rem;
+				}
+			}
+
+			p {
+				margin-bottom: 1rem;
+				font-size: 1rem;
+			}
+
+			@media (min-width: 640px) {
+				p {
+					font-size: 1.125rem;
+				}
+			}
+
+			a {
+				color: #a5b4fc;
+				text-decoration: none;
+			}
+
+			a:hover {
+				color: #c7d2fe;
+			}
+		</style>
+	</head>
+	<body>
+		<main set:html={html} />
+	</body>
+</html>
