@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Reading";
+const description = "Books I've read by Steven Chang";
+
+// define book structure
+type Book = {
+	title: string;
+	author: string;
+	url?: string;
+};
+
+type Section = {
+	heading: string;
+	books: Book[];
+};
+
+// manually curated list of books in chronological order
+const sections: Section[] = [
+	{
+		heading: "Favorites",
+		books: [
+			{ title: "Deep Work", author: "Cal Newport" },
+			{ title: "So Good They Can't Ignore You", author: "Cal Newport" },
+			{ title: "Never Split the Difference", author: "Chris Voss" },
+		]
+	},
+	{
+		heading: "2025 (in progress)",
+		books: [
+			{ title: "Thinking in Bets", author: "Annie Duke", url: "/reading/thinking-in-bets" },
+			{ title: "Before the Coffee Gets Cold", author: "Toshikazu Kawaguchi" },
+			{ title: "When Things Fall Apart", author: "Pema Chodron" },
+			{ title: "Man's Search for Meaning", author: "Victor Frankl" },
+			{ title: "The Psychology of Money", author: "Morgan Housel" },
+		]
+	}
+];
+---
+
+<BaseLayout title={title} description={description}>
+	<h1>Reading</h1>
+	<ul style="list-style: none; padding: 0;">
+		{sections.map((section) => (
+			<>
+				<li style="margin-bottom: 1rem;">
+					<span style="color: #9ca3af; font-size: 1.25rem; font-weight: normal;">{section.heading}</span>
+				</li>
+				<ul style="list-style-type: disc; margin-left: 0; margin-bottom: 1.5rem;">
+					{section.books.map((book) => (
+						<li style="margin-bottom: 0.5rem;">
+							{book.url ? (
+								<a href={book.url} style="font-size: 1.25rem; font-weight: 600;">
+									{book.title}
+								</a>
+							) : (
+								<span style="font-size: 1.25rem; font-weight: 600;">
+									{book.title}
+								</span>
+							)}
+							<span style="color: #9ca3af; font-size: 1.125rem;"> by {book.author}</span>
+						</li>
+					))}
+				</ul>
+			</>
+		))}
+	</ul>
+</BaseLayout>

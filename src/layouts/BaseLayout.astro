@@ -131,12 +131,31 @@ const { title, description } = Astro.props;
 				font-style: italic;
 				color: #c7d2fe;
 			}
+
+			ul, ol {
+				margin-bottom: 1rem;
+				padding-left: 2rem;
+			}
+
+			li {
+				margin-bottom: 0.5rem;
+				font-size: 1rem;
+			}
+
+			@media (min-width: 640px) {
+				li {
+					font-size: 1.125rem;
+				}
+			}
 		</style>
 	</head>
 	<body>
 		<nav>
 			<a href="/">Home</a>
-			<a href="/posts">Posts</a>
+			<div style="display: flex; gap: 1.5rem;">
+				<a href="/reading">Reading</a>
+				<a href="/writing">Writing</a>
+			</div>
 		</nav>
 		<main>
 			<slot />

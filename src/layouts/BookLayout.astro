@@ -1,0 +1,17 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+const { title, author, year } = frontmatter;
+const description = `${title} by ${author} (${year})`;
+---
+
+<BaseLayout title={title} description={description}>
+	<article>
+		<div style="margin-bottom: 1.5rem;">
+			<h1 style="margin-bottom: 0.5rem;">{title}</h1>
+			<p style="color: #9ca3af; font-size: 1.125rem;">by {author}</p>
+		</div>
+		<slot />
+	</article>
+</BaseLayout>
