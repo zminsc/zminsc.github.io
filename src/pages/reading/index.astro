@@ -9,6 +9,7 @@ type Book = {
 	title: string;
 	author: string;
 	url?: string;
+	rating?: number; // 1-5 scale, only render if >= 4
 };
 
 type Section = {
@@ -21,19 +22,21 @@ const sections: Section[] = [
 	{
 		heading: "Favorites",
 		books: [
-			{ title: "Deep Work", author: "Cal Newport" },
-			{ title: "So Good They Can't Ignore You", author: "Cal Newport" },
-			{ title: "Never Split the Difference", author: "Chris Voss" },
+			{ title: "Deep Work", author: "Cal Newport", rating: 5 },
+			{ title: "So Good They Can't Ignore You", author: "Cal Newport", rating: 5 },
+			{ title: "Never Split the Difference", author: "Chris Voss", rating: 5 },
 		]
 	},
 	{
 		heading: "2025 (in progress)",
 		books: [
-			{ title: "Thinking in Bets", author: "Annie Duke", url: "/reading/thinking-in-bets" },
-			{ title: "Before the Coffee Gets Cold", author: "Toshikazu Kawaguchi" },
-			{ title: "When Things Fall Apart", author: "Pema Chodron" },
-			{ title: "Man's Search for Meaning", author: "Victor Frankl" },
-			{ title: "The Psychology of Money", author: "Morgan Housel" },
+			{ title: "Conversations on Love", author: "Natasha Lunn", rating: 4 },
+			{ title: "Co-Intelligence", author: "Ethan Mollick", rating: 2 },
+			{ title: "Thinking in Bets", author: "Annie Duke", url: "/reviews/thinking-in-bets", rating: 4 },
+			{ title: "Before the Coffee Gets Cold", author: "Toshikazu Kawaguchi", rating: 3 },
+			{ title: "When Things Fall Apart", author: "Pema Chodron", rating: 3 },
+			{ title: "Man's Search for Meaning", author: "Victor Frankl", rating: 4 },
+			{ title: "The Psychology of Money", author: "Morgan Housel", rating: 5 },
 		]
 	}
 ];
@@ -42,13 +45,18 @@ const sections: Section[] = [
 <BaseLayout title={title} description={description}>
 	<h1>Reading</h1>
 	<ul style="list-style: none; padding: 0;">
-		{sections.map((section) => (
+		{sections.map((section) => {
+			const booksToDisplay = section.heading === "Favorites"
+				? section.books
+				: section.books.filter((book) => !book.rating || book.rating >= 4);
+
+			return (
 			<>
 				<li style="margin-bottom: 1rem;">
 					<span style="color: #9ca3af; font-size: 1.25rem; font-weight: normal;">{section.heading}</span>
 				</li>
 				<ul style="list-style-type: disc; margin-left: 0; margin-bottom: 1.5rem;">
-					{section.books.map((book) => (
+					{booksToDisplay.map((book) => (
 						<li style="margin-bottom: 0.5rem;">
 							{book.url ? (
 								<a href={book.url} style="font-size: 1.25rem; font-weight: 600;">
@@ -64,6 +72,7 @@ const sections: Section[] = [
 					))}
 				</ul>
 			</>
-		))}
+			);
+		})}
 	</ul>
 </BaseLayout>
