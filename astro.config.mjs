@@ -4,6 +4,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://zminsc.github.io',
+  site: 'https://zminsc.dev',
   integrations: [sitemap()],
 });
